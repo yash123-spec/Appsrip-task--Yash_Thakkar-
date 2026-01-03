@@ -4,7 +4,7 @@ A responsive e-commerce product listing page built with Next.js, TypeScript, and
 
 ## 🚀 Live Demo
 
-[View Live Demo](https://appscrip-task-netlify.app) _(Will be updated after deployment)_
+[View Live Demo](https://productlistingappscrip.netlify.app/) 
 
 ## 🛠️ Technologies Used
 
@@ -20,20 +20,6 @@ A responsive e-commerce product listing page built with Next.js, TypeScript, and
 - Product filtering and search
 - SEO optimized
 
-## 🚀 Getting Started
-
-```bash
-# Clone the repository
-git clone https://github.com/your-username/Appscrip-task-candidate-name.git
-
-# Install dependencies
-npm install
-
-# Run development server
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) to view in browser.
 
 ## 🏗️ Build for Production
 
