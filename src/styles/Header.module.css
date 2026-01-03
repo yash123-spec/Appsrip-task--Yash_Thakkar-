@@ -1,0 +1,150 @@
+.header {
+  background-color: #fff;
+  border-bottom: 1px solid #e0e0e0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 70px;
+}
+
+.logo h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  letter-spacing: 2px;
+}
+
+.nav {
+  display: flex;
+}
+
+.navList {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.navList li a {
+  font-weight: 500;
+  color: #333;
+  font-size: 14px;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.navList li a:hover {
+  color: #007bff;
+}
+
+.icons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.iconButton {
+  padding: 8px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.iconButton:hover {
+  background-color: #f5f5f5;
+}
+
+.menuToggle {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px;
+}
+
+.hamburger {
+  width: 20px;
+  height: 2px;
+  background-color: #333;
+  transition: 0.3s;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .menuToggle {
+    display: flex;
+  }
+
+  .nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    border-top: 1px solid #e0e0e0;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .navOpen {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .navList {
+    flex-direction: column;
+    gap: 0;
+    padding: 20px;
+  }
+
+  .navList li {
+    width: 100%;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .navList li a {
+    display: block;
+    padding: 15px 0;
+    font-size: 16px;
+  }
+
+  .navList li:last-child {
+    border-bottom: none;
+  }
+
+  .icons {
+    gap: 15px;
+  }
+
+  .logo h1 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 12px;
+    min-height: 60px;
+  }
+
+  .icons {
+    gap: 10px;
+  }
+
+  .iconButton {
+    padding: 6px;
+  }
+}

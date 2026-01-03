@@ -1,0 +1,225 @@
+.sidebar {
+  background-color: #fff;
+  border-right: 1px solid #e0e0e0;
+  width: 260px;
+  height: fit-content;
+  position: sticky;
+  top: 71px;
+  overflow-y: auto;
+  max-height: calc(100vh - 71px);
+  flex-shrink: 0;
+}
+
+.sidebarHeader {
+  display: none;
+  padding: 16px 20px;
+  border-bottom: 1px solid #e0e0e0;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sidebarHeader h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.closeButton {
+  font-size: 24px;
+  color: #666;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.closeButton:hover {
+  background-color: #f0f0f0;
+}
+
+.filterContent {
+  padding: 16px;
+}
+
+.clearButton {
+  width: 100%;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.clearButton:hover {
+  background-color: #e9ecef;
+  border-color: #adb5bd;
+}
+
+.filterGroup {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 20px;
+}
+
+.filterGroup:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.filterHeader {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  text-align: left;
+  transition: color 0.3s ease;
+}
+
+.filterHeader:hover {
+  color: #007bff;
+}
+
+.arrow {
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+
+.arrowUp {
+  transform: rotate(180deg);
+}
+
+.filterOptions {
+  padding-top: 12px;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 4px;
+}
+
+.checkboxLabel:hover {
+  background-color: #f8f9fa;
+}
+
+.checkbox {
+  width: 16px;
+  height: 16px;
+  accent-color: #333;
+}
+
+.checkboxText {
+  font-size: 14px;
+  color: #666;
+  flex-grow: 1;
+}
+
+.priceInputs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.priceInput {
+  flex: 1;
+  padding: 6px 8px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.priceInput:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.viewAll {
+  color: #007bff;
+  font-size: 12px;
+  margin-top: 8px;
+  padding: 4px 0;
+  text-decoration: underline;
+}
+
+.viewAll:hover {
+  text-decoration: none;
+}
+
+.overlay {
+  display: none;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    max-height: none;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .sidebarOpen {
+    transform: translateX(0);
+  }
+
+  .sidebar:not(.sidebarOpen) {
+    transform: translateX(-100%);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .sidebarHeader {
+    display: flex;
+  }
+
+  .overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+
+  .filterContent {
+    padding: 16px;
+    height: calc(100vh - 70px);
+    overflow-y: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    width: 100vw;
+  }
+
+  .filterContent {
+    padding: 12px;
+  }
+
+  .filterGroup {
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+  }
+}
