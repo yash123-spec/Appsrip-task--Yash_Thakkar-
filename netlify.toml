@@ -36,3 +36,13 @@
 [dev]
   command = "npm run dev"
   port = 3000
+
+[build.environment]
+  NODE_VERSION = "18"
+
+# Handle specific routes if you have dynamic routing
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+  status = 200
